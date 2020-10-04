@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root{
+  --primary: #efb6b2;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
+}
+* {
+  padding: 0;
+  margin: 5px;
+  box-sizing: border-box;
+}
+/* base styles & title */
+body{
+  font-family: "Noto Serif";
+  color: var(--secondary);
+  background-color: #fecdbc;
+  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+  
+}
+header {
+  background-color: #FDFDFD;
+  text-align: center;
+  width: "100%";
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.App{
+  max-width: 960px;
+  margin: 0 auto;
+}
+h1{
+  color: var(--primary);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.title h2, .title p{
+  text-align: center;
+}
+.title h2{
+  margin-top: 60px;
+  font-size: 2.6rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.p-div{
+  margin-top: 45px;
+  text-align: center;
+  font-size: 1.0rem;
+}
+.h-div{
+  margin-bottom: 25px;
+}
+.text-input{
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  position: relative;
+  margin: 30px auto 20px auto;
+  margin-bottom: 35px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+button{
+  width:170px; 
+  margin: -40px -40px; 
+  top:40%; 
+  left:41.5%;
+}
+.return-button{
+  width:170px; 
+  top: 30%; 
+  left:41.5%;
+}
+
+.name-button{
+  width:180px; 
+  margin: -40px -40px; 
+  top:40%; 
+  left:25%;
+}
+
+.trade-button{
+  width:180px; 
+  margin: -40px -40px; 
+  top:40%; 
+  left:35%;
+}
+
+/* upload form styles */
+.output{
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error{
+  color: var(--error);
+}
+.p {
+  font-size: 1.6rem;
+}
+form{
+  margin: 30px auto 10px;
+  text-align: center;
+}
+label input{
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+label{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 30px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* progress bar styles */
+.progress-bar{
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}
+
+/* image grid styles */
+.img-grid{
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+.img-wrap{
+  justify-content: center;
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+  flex: 3;
+}
+.img-wrap img{
+  justify-content: center;
+  min-width: 20%;
+  min-height: 20%;
+  max-width: 50%;
+  max-height: 50%;
+  position: absolute;
+  top: 5%;
+  left: 25.4%;
+}
+
+/* modal styles */
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.backdrop img{
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+  border: 3px solid white;
 }
